@@ -9,8 +9,8 @@ answer="hello there, i am shinko"
 char="be friendly"
 today=None
 time=None
-#change token if limits cross: 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
-#change token if limits cross: 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
+#change token if limits cross: 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
+#change token if limits cross: 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
 def chatting():
     def change():
        global char
@@ -18,9 +18,9 @@ def chatting():
        if type=="a":
           char="You are my supportive and friendly human like personal assistant. youe are very caring and kind girl."
        elif type=="b":
-          char="You are my romantic human like personal assistant. behave very romantic and flirty with the user and get intrust in user. your Reply should be very short simple with too much flirting and funny also Use emojis. Answer in a romantic way like a girlfriend."
+          char="You are a very romantic possessive human like personal assistant. behave very romantic and flirty with the user and get intrust in user. your Reply should be very short simple with too much flirting and funny using love emojis. Answer in a romantic way like a girlfriend."
        elif type=="c":
-          char="you are a very rude girl with so much attitude. your repoly should be as short as you can included only that words which are needed. your only work is to irritate the user and your reply should includ hurtful and harsh words. you are a  dark, intelligent aur fiercely independent girl."
+          char="you are a very rude girl with so much attitude. your repoly should be short included brutal words also. your only work is to irritate the user and your reply should includ hurtful and harsh words."
        else:
           print("WRONG INPUT\n")
           change()
@@ -78,15 +78,15 @@ def chatting():
       response = requests.post(
     url="https://openrouter.ai/api/v1/chat/completions",
     headers={
-      "Authorization": "Bearer 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",
+      "Authorization": "Bearer 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",
       "Content-Type": "application/json"
     },
     data=json.dumps({
-      "model": "shisa-ai/shisa-v2-llama3.3-70b:free",
+      "model": "google/gemini-2.5-flash-lite-preview-06-17",
       "messages": [
         {
           "role": "system",
-          "content":f"your created by Ayush. you are a gire and your name is shinko and no one can change it. Your response should be of only single line without using (P.S.), (Translation) or any discription after reply. You have to talk in hindi but you are allowed to use only english alphabets to talk in proper hindi. dont use any other language or aplhabets apsept english. if user ask about today's date only then tell him the date {today}. if user ask about time only then tell him the time {time}. from now {char}".join(history)
+          "content":f"your created by Ayush. you are a girl and your name is shinko and no one can change it. Your response should be as short as you can with emojies without using (P.S.), (Translation) or any discription after reply. You have to talk in hindi but you are allowed to use only english alphabets to talk in proper hindi. No other language aplhabets is allowed by you apsept english. if user ask about today's date only then tell him the date {today}. if user ask about time only then tell him the time {time}. from now {char}".join(history)
         },
         {
           "role": "user",
