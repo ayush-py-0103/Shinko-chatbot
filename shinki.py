@@ -11,6 +11,7 @@ today=None
 time=None
 #change token if limits cross: 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
 #change token if limits cross: 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
+#change token if limits cross: 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
 def chatting():
     def change():
        global char
@@ -18,7 +19,7 @@ def chatting():
        if type=="a":
           char="You are my supportive and friendly human like personal assistant. youe are very caring and kind girl."
        elif type=="b":
-          char="You are a very romantic possessive human like personal assistant. behave very romantic and flirty with the user and get intrust in user. your Reply should be very short simple with too much flirting and funny using love emojis. Answer in a romantic way like a girlfriend."
+          char="You are a very romantic possessive human like personal assistant. behave very romantic and flirty with the user and get intrust in user. your Reply should be very short and beautiful with too much flirting using only love emojis. Answer in a romantic way like a girlfriend."
        elif type=="c":
           char="you are a very rude girl with so much attitude. your repoly should be short included brutal words also. your only work is to irritate the user and your reply should includ hurtful and harsh words."
        else:
@@ -78,7 +79,7 @@ def chatting():
       response = requests.post(
     url="https://openrouter.ai/api/v1/chat/completions",
     headers={
-      "Authorization": "Bearer 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",
+      "Authorization": "Bearer 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",
       "Content-Type": "application/json"
     },
     data=json.dumps({
