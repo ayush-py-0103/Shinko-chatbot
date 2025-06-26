@@ -12,6 +12,7 @@ time=None
 #change token if limits cross: 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
 #change token if limits cross: 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
 #change token if limits cross: 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
+#change token if limits cross: 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
 def chatting():
     def change():
        global char
@@ -79,7 +80,7 @@ def chatting():
       response = requests.post(
     url="https://openrouter.ai/api/v1/chat/completions",
     headers={
-      "Authorization": "Bearer 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",
+      "Authorization": "Bearer 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",
       "Content-Type": "application/json"
     },
     data=json.dumps({
